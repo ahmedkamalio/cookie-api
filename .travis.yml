@@ -1,22 +1,13 @@
 language: node_js
 
 node_js:
-  - 'node'
   - '10'
-  - '8'
-
-env:
-  - workerCount=3 timeout=600000
-
-matrix:
-  fast_finish: true
 
 branches:
   only:
     - master
 
 install:
-  - npm set progress=false
   - npm install
 
 cache:
@@ -24,7 +15,4 @@ cache:
     - node_modules
 
 script:
-  - npm run test
-
-git:
-  depth: 1
+  - npx jest
