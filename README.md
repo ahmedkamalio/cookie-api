@@ -1,3 +1,8 @@
+![Travis (.org)](https://img.shields.io/travis/ahmedmkamal/cookie-api?style=flat-square)
+![npm bundle size (version)](https://img.shields.io/bundlephobia/min/cookie-api/1.0.0?style=flat-square)
+![jsDelivr hits (npm)](https://img.shields.io/jsdelivr/npm/hw/cookie-api?style=flat-square)
+![npm](https://img.shields.io/npm/dw/cookie-api?style=flat-square)
+
 # Cookie API
 
 A handy set of APIs to manage browser cookies.
@@ -10,7 +15,7 @@ A handy set of APIs to manage browser cookies.
 - JSON support out of the box.
 - Base64 encoding/decoding also out of the box.
 - Precompressed version included.
-- Very VERY small in size (9 kb minified).
+- Very VERY small in size (3.5 kb minified).
 - Available through [NPM](https://www.npmjs.com/package/cookie-api) or [JsDelivr CDN](https://cdn.jsdelivr.net/npm/cookie-api/).
 - Available as [API style](#api-style) and [Builder class style](#builder-style).
 - Compatible with [Angular](https://github.com/angular/angular), [React](https://github.com/facebook/react) and [Vue](https://github.com/vuejs/vue).
@@ -243,6 +248,19 @@ const cookie = new Cookie().setName('name').setValue('value');
 // you have to call save to actually save it.
 cookie.save();
 ```
+
+## Available options
+
+Available cookie options for both API and Builder class.
+
+|        Option         |        Type         | Default |
+| :-------------------: | :-----------------: | :-----: |
+|         path          |      `string`       |  `''`   |
+|        domain         |      `string`       |  `''`   |
+| expDate (aka expires) | `string` `|` `Date` |  `''`   |
+|        maxAge         |      `number`       |  `-1`   |
+|        secure         |      `boolean`      | `false` |
+|        encode         |      `boolean`      | `false` |
 
 ## Using the CDN version
 
