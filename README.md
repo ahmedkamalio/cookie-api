@@ -253,14 +253,14 @@ cookie.save();
 
 Available cookie options for both API and Builder class.
 
-|        Option         |        Type         | Default |
-| :-------------------: | :-----------------: | :-----: |
-|         path          |      `string`       |  `''`   |
-|        domain         |      `string`       |  `''`   |
-| expDate (aka expires) | `string` `|` `Date` |  `''`   |
-|        maxAge         |      `number`       |  `-1`   |
-|        secure         |      `boolean`      | `false` |
-|        encode         |      `boolean`      | `false` |
+|        Option         |        Type        | Default |
+| :-------------------: | :----------------: | :-----: |
+|         path          |      `string`      |  `''`   |
+|        domain         |      `string`      |  `''`   |
+| expDate (aka expires) | `string` or `Date` |  `''`   |
+|        maxAge         |      `number`      |  `-1`   |
+|        secure         |     `boolean`      | `false` |
+|        encode         |     `boolean`      | `false` |
 
 ## Using the CDN version
 
