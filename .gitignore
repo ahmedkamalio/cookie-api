@@ -1,0 +1,12 @@
+# IDE
+/.vscode
+
+# dependencies
+/node_modules
+
+# testing
+/temp
+
+# production
+/build
+/dist

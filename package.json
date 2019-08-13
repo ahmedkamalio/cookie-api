@@ -1,0 +1,49 @@
+{
+  "name": "cookie-api",
+  "version": "1.0.0",
+  "description": "A handy set of APIs to manage browser cookies.",
+  "main": "index.ts",
+  "scripts": {
+    "build": "./node_modules/.bin/tsc",
+    "clean": "./node_modules/.bin/rimraf build build.browser dist",
+    "lint": "./node_modules/.bin/tslint -p tsconfig.json -c tslint.json **/*.ts",
+    "postbuild": "./node_modules/.bin/webpack",
+    "prebuild": "npm run clean && npm run test",
+    "prelint": "npm run pretty",
+    "pretest": "npm run lint",
+    "pretty": "./node_modules/.bin/prettier --list-different --write **/*.{js,ts}",
+    "stage:pack": "node scripts/stage-pack.js",
+    "test": "./node_modules/.bin/jest"
+  },
+  "keywords": [
+    "cookie",
+    "cookies"
+  ],
+  "homepage": "https://github.com/ahmedmkamal/cookie-api",
+  "author": "Ahmed Kamal <en.ahmed.mk@gmail.com>",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ahmedmkamal/cookie-api.git"
+  },
+  "bugs": {
+    "url": "https://github.com/ahmedmkamal/cookie-api/issues"
+  },
+  "devDependencies": {
+    "@types/app-root-path": "^1.2.4",
+    "@types/jest": "^24.0.17",
+    "@types/jsdom": "^12.2.4",
+    "app-root-path": "^2.2.1",
+    "compression-webpack-plugin": "^3.0.0",
+    "fs-extra": "^8.1.0",
+    "jest": "^24.8.0",
+    "prettier": "^1.18.2",
+    "rimraf": "^2.6.3",
+    "terser-webpack-plugin": "^1.4.1",
+    "ts-jest": "^24.0.2",
+    "tslint": "^5.18.0",
+    "typescript": "^3.5.3",
+    "webpack": "^4.39.1",
+    "webpack-cli": "^3.3.6"
+  }
+}
