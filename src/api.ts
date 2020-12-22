@@ -68,7 +68,7 @@ export function getAllCookies(): { [key: string]: string } {
     .split(';')
     .map((pairs) => pairs.split('='))
     .forEach((pair) => {
-      cookies[pair[0].trim()] = decodeURIComponent(pair[1]);
+      cookies[pair[0].trim()] = decodeURIComponent((pair[1] || '').replace(/%/g, '%25'));
     });
   Object.keys(cookies).forEach((cookie) => {
     if (!cookie) {
