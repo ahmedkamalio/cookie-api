@@ -9,5 +9,5 @@ export const DEFAILT_COOKIE_OPTIONS: ICookieOptions = {
   expDate: '',
   maxAge: -1,
   secure: false,
-  encode: false
+  encode: false,
 };

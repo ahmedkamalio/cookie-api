@@ -1,4 +1,3 @@
-![Travis (.org)](https://img.shields.io/travis/ahmedmkamal/cookie-api?style=flat-square)
 ![npm bundle size (version)](https://img.shields.io/bundlephobia/min/cookie-api/1.0.0?style=flat-square)
 ![jsDelivr hits (npm)](https://img.shields.io/jsdelivr/npm/hw/cookie-api?style=flat-square)
 ![npm](https://img.shields.io/npm/dw/cookie-api?style=flat-square)
@@ -7,15 +6,15 @@
 
 A handy set of APIs to manage browser cookies.
 
-## Why it's "handy"
+## Why cookie-api
 
 - You Can use it in [NodeJs](https://nodejs.org/en/) or any Browser.
 - You don't have to worry about character encoding.
 - dependency-free.
 - JSON support out of the box.
-- Base64 encoding/decoding also out of the box.
-- Precompressed version included.
-- Very VERY small in size (3.5 kb minified).
+- Base64 encoding/decoding out of the box.
+- Pre-compressed version included.
+- Tiny (2.8 kb UMD minified).
 - Available through [NPM](https://www.npmjs.com/package/cookie-api) or [JsDelivr CDN](https://cdn.jsdelivr.net/npm/cookie-api/).
 - Available as [API style](#api-style) and [Builder class style](#builder-style).
 - Compatible with [Angular](https://github.com/angular/angular), [React](https://github.com/facebook/react) and [Vue](https://github.com/vuejs/vue).
@@ -267,13 +266,13 @@ Available cookie options for both API and Builder class.
 You can import it directly in the browser by adding the script below in your web page.
 
 ```html
-<script src="https://cdn.jsdelivr.net/npm/cookie-api@1.0.0/umd/cookie-api.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/cookie-api@2.0.0/dist/umd/index.js"></script>
 ```
 
 Both the API and the builder class are available under the `CookieAPI` namespace.
 
 ```html
-<script src="https://cdn.jsdelivr.net/npm/cookie-api@1.0.0/umd/cookie-api.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/cookie-api@2.0.0/dist/umd/index.js"></script>
 <script>
   CookieAPI.setCookie('name', 'value');
   console.log(CookieAPI.getAllCookies()); // returns { name: "value" }

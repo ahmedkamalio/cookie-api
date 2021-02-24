@@ -7,7 +7,7 @@ import {
   getAllCookies,
   getCookie,
   getCookieDecoded,
-  setCookie
+  setCookie,
 } from '../src/api';
 
 describe('Cookie API', () => {

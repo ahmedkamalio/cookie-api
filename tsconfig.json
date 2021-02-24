@@ -9,7 +9,7 @@
       "dom",
       "es6"
     ],
-    "module": "commonjs",
+    "module": "es6",
     "moduleResolution": "node",
     "noFallthroughCasesInSwitch": true,
     "noImplicitReturns": false,
@@ -17,7 +17,6 @@
     "noUnusedParameters": true,
     "outDir": "build",
     "removeComments": false,
-    "rootDir": ".",
     "sourceMap": true,
     "strict": true,
     "target": "es6"
@@ -28,7 +27,6 @@
     "dist"
   ],
   "include": [
-    "*.ts",
     "src/**/*.ts"
   ]
 }

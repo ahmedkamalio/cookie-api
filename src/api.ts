@@ -13,7 +13,7 @@ export function addCookie(
   name: string,
   value: string,
   options: ICookieOptions = DEFAILT_COOKIE_OPTIONS
-) {
+): void {
   if (cookieExists(name)) {
     return;
   }
@@ -31,7 +31,7 @@ export function setCookie(
   name: string,
   value: string,
   options: ICookieOptions = DEFAILT_COOKIE_OPTIONS
-) {
+): void {
   assertNameSet(name);
   const { path, domain, expDate, maxAge, secure } = options;
   let cookie = `${name}=`;
@@ -68,7 +68,9 @@ export function getAllCookies(): { [key: string]: string } {
     .split(';')
     .map((pairs) => pairs.split('='))
     .forEach((pair) => {
-      cookies[pair[0].trim()] = decodeURIComponent((pair[1] || '').replace(/%/g, '%25'));
+      cookies[pair[0].trim()] = decodeURIComponent(
+        (pair[1] || '').replace(/%/g, '%25')
+      );
     });
   Object.keys(cookies).forEach((cookie) => {
     if (!cookie) {
@@ -107,14 +109,14 @@ export function getCookieDecoded(
  * Delete a cookie by its name.
  * @param name Cookie's name.
  */
-export function deleteCookie(name: string) {
+export function deleteCookie(name: string): void {
   setCookie(name, '', { expDate: 'Thu, 01 Jan 1970 00:00:01 GMT' });
 }
 
 /**
  * Delete all visible cookies.
  */
-export function deleteAllCookies() {
+export function deleteAllCookies(): void {
   Object.keys(getAllCookies()).forEach(deleteCookie);
 }
 

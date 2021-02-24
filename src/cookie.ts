@@ -19,8 +19,8 @@ export class Cookie {
    * @param options Cookie options.
    */
   constructor(
-    name: string = '',
-    value: any = '',
+    name = '',
+    value: unknown = '',
     options: ICookieOptions = DEFAILT_COOKIE_OPTIONS
   ) {
     this._name = name;
@@ -44,7 +44,7 @@ export class Cookie {
     if (!value && !defaultValue) {
       return undefined;
     }
-    return new Cookie(name, !!value ? value : defaultValue);
+    return new Cookie(name, value ?? defaultValue);
   }
 
   /**
@@ -58,7 +58,7 @@ export class Cookie {
     if (!value && !defaultValue) {
       return undefined;
     }
-    return new Cookie(name, !!value ? value : defaultValue);
+    return new Cookie(name, value ?? defaultValue);
   }
 
   /**
@@ -83,7 +83,7 @@ export class Cookie {
    * @param value Cookie's value.
    * @returns this Cookie builder.
    */
-  setValue(value: any): Cookie {
+  setValue(value: unknown): Cookie {
     if (
       typeof value === 'string' ||
       typeof value === 'number' ||
@@ -208,14 +208,14 @@ export class Cookie {
   /**
    * Save this cookie to the document.
    */
-  save() {
+  save(): void {
     setCookie(this._name, this._value, {
       path: this._path,
       domain: this._domain,
       expDate: this._expDate,
       maxAge: this._maxAge,
       secure: this._secure,
-      encode: this._encode
+      encode: this._encode,
     });
   }
 }
