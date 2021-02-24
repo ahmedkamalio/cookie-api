@@ -3,7 +3,7 @@ import { ICookieOptions } from '../interfaces/cookie-options';
 /**
  * The default values of the cookie's options.
  */
-export const DEFAILT_COOKIE_OPTIONS: ICookieOptions = {
+export const DEFAULT_COOKIE_OPTIONS: ICookieOptions = {
   path: '',
   domain: '',
   expDate: '',

@@ -1,7 +1,7 @@
 import { assertNameSet } from './utils/assert-name-set';
 import { expires } from './utils/expires';
 import { ICookieOptions } from './interfaces/cookie-options';
-import { DEFAILT_COOKIE_OPTIONS } from './constants/default-options';
+import { DEFAULT_COOKIE_OPTIONS } from './constants/default-options';
 
 /**
  * Add a new cookie to the document only if no cookie exists with the same name.
@@ -12,7 +12,7 @@ import { DEFAILT_COOKIE_OPTIONS } from './constants/default-options';
 export function addCookie(
   name: string,
   value: string,
-  options: ICookieOptions = DEFAILT_COOKIE_OPTIONS
+  options: ICookieOptions = DEFAULT_COOKIE_OPTIONS
 ): void {
   if (cookieExists(name)) {
     return;
@@ -30,7 +30,7 @@ export function addCookie(
 export function setCookie(
   name: string,
   value: string,
-  options: ICookieOptions = DEFAILT_COOKIE_OPTIONS
+  options: ICookieOptions = DEFAULT_COOKIE_OPTIONS
 ): void {
   assertNameSet(name);
   const { path, domain, expDate, maxAge, secure } = options;

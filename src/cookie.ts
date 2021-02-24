@@ -1,4 +1,4 @@
-import { DEFAILT_COOKIE_OPTIONS } from './constants/default-options';
+import { DEFAULT_COOKIE_OPTIONS } from './constants/default-options';
 import { getCookie, getCookieDecoded, setCookie } from './api';
 import { ICookieOptions } from './interfaces/cookie-options';
 
@@ -21,7 +21,7 @@ export class Cookie {
   constructor(
     name = '',
     value: unknown = '',
-    options: ICookieOptions = DEFAILT_COOKIE_OPTIONS
+    options: ICookieOptions = DEFAULT_COOKIE_OPTIONS
   ) {
     this._name = name;
     this.setValue(value);
