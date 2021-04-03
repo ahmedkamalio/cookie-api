@@ -1,3 +1,4 @@
+import { Buffer } from 'buffer';
 import { assertNameSet } from './utils/assert-name-set';
 import { expires } from './utils/expires';
 import { ICookieOptions } from './interfaces/cookie-options';
