@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <main style="display: flex; align-items: center; flex-direction: column">
+      <div>
+        <p>Current Cookies</p>
+        <pre
+          id="cookie-preview"
+          style="background-color: #ffe0dd; padding: 1em; border-radius: 0.25em"
+        ></pre>
+      </div>
+      <div>
+        <button onclick="setCookie()">Set Randrom</button>
+        <button onclick="clearCookies()">Clear Cookie</button>
+      </div>
+    </main>
+
+    <script src="https://cdn.jsdelivr.net/npm/cookie-api@2.0.0/dist/umd/index.js"></script>
+    <script>
+      function makeRandCharSeq() {
+        let result = '';
+        const length = Math.floor(Math.random() * 5) + 1;
+        const characters = 'ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789';
+        for (var i = 0; i < length; i++) {
+          result += characters.charAt(Math.floor(Math.random() * characters.length));
+        }
+        return result;
+      }
+
+      const preview = document.querySelector('pre#cookie-preview');
+
+      function displayCookies() {
+        preview.innerHTML = JSON.stringify(CookieAPI.getAllCookies(), null, 2);
+      }
+
+      displayCookies();
+
+      function setCookie() {
+        document.cookie = `${makeRandCharSeq()}=${makeRandCharSeq()}`;
+        displayCookies();
+      }
+
+      function clearCookies() {
+        CookieAPI.deleteAllCookies();
+        displayCookies();
+      }
+    </script>
+  </body>
+</html>
