@@ -1,6 +1,6 @@
 {
   "name": "cookie-api",
-  "version": "2.0.1",
+  "version": "2.0.2",
   "description": "A handy set of APIs to manage browser cookies.",
   "main": "dist/cjs/index.js",
   "module": "dist/es/index.js",
