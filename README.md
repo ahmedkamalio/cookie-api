@@ -266,13 +266,13 @@ Available cookie options for both API and Builder class.
 You can import it directly in the browser by adding the script below in your web page.
 
 ```html
-<script src="https://cdn.jsdelivr.net/npm/cookie-api@2.0.1/dist/umd/index.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/cookie-api2.0.2/dist/umd/index.js"></script>
 ```
 
 Both the API and the builder class are available under the `CookieAPI` namespace.
 
 ```html
-<script src="https://cdn.jsdelivr.net/npm/cookie-api@2.0.1/dist/umd/index.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/cookie-api2.0.2/dist/umd/index.js"></script>
 <script>
   CookieAPI.setCookie('name', 'value');
   console.log(CookieAPI.getAllCookies()); // returns { name: "value" }

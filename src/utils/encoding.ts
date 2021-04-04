@@ -1,9 +1,9 @@
-/*
-toBinary and fromBinary are from the 
-Mozilla Contributors and are licensed under CC-BY-SA 2.5.
-Page: https://developer.mozilla.org/en-US/docs/Web/API/WindowOrWorkerGlobalScope/btoa
-*/
-
+/**
+ * @author @Chaostheorie
+ * toBinary and fromBinary are from the 
+ * Mozilla Contributors and are licensed under CC-BY-SA 2.5.
+ * @see https://developer.mozilla.org/en-US/docs/Web/API/WindowOrWorkerGlobalScope/btoa
+ */
 
 /**
  * convert a Unicode string to a string in which
