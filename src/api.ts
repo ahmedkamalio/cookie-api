@@ -1,6 +1,6 @@
-import { Buffer } from 'buffer';
 import { assertNameSet } from './utils/assert-name-set';
 import { expires } from './utils/expires';
+import { encode, decode } from './utils/encoding';
 import { ICookieOptions } from './interfaces/cookie-options';
 import { DEFAULT_COOKIE_OPTIONS } from './constants/default-options';
 
@@ -37,7 +37,8 @@ export function setCookie(
   const { path, domain, expDate, maxAge, secure } = options;
   let cookie = `${name}=`;
   if (options.encode) {
-    cookie += `${encodeURIComponent(Buffer.from(value).toString('base64'))};`;
+
+    cookie += `${encodeURIComponent(encode(value))};`;
   } else {
     cookie += `${encodeURIComponent(value)};`;
   }
@@ -103,7 +104,7 @@ export function getCookieDecoded(
   if (!value) {
     return defaultValue;
   }
-  return Buffer.from(value, 'base64').toString();
+  return decode(value);
 }
 
 /**
